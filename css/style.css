@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #FAF9F7;
 }
@@ -18,7 +20,8 @@ h1 {
     font-family: 'Whitney SSm A', 'Whitney SSm B'; 
     font-weight: 300; 
     font-style: normal;
-    font-size: 3em;
+    font-size: 4em;
+
 }
 
 h2, h3 {
@@ -26,22 +29,27 @@ h2, h3 {
     font-weight: 700; 
     font-style: normal;
     letter-spacing: 1px;
-    text-transform: uppercase;
     text-align: center;
 }
 
 p {
     font-family: 'Mercury SSm A', 'Mercury SSm B';
     font-style: normal;
+    line-height: 146%;
+    color: #575757;
 }
 
 p.lead {
     font-style: italic;
+    color: #ddd;
+    font-size: 1.3125em;
+    -webkit-font-smoothing: antialiased;
 }
 
 p.subtitle {
     font-style: italic;
     text-align: center;
+    font-size: 0.875em;
 }
 
 a.logo { 
