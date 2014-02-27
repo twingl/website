@@ -1,5 +1,5 @@
 
-
+/* TODO: Refactor the heading/body sizes onto a typographic scale. */
 body {
     background-color: #FAF9F7;
 }
@@ -12,6 +12,10 @@ header {
     background-image: radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
 }
 
+section {
+    clear: both;
+}
+
 section.hero {
     text-align: center;
 }
@@ -21,7 +25,8 @@ h1 {
     font-weight: 300; 
     font-style: normal;
     font-size: 4em;
-
+    letter-spacing: -0.03em;
+    -webkit-font-smoothing: antialiased;
 }
 
 h2, h3 {
@@ -30,6 +35,7 @@ h2, h3 {
     font-style: normal;
     letter-spacing: 1px;
     text-align: center;
+    font-size: 0.75em;
 }
 
 p {
@@ -41,8 +47,8 @@ p {
 
 p.lead {
     font-style: italic;
-    color: #ddd;
-    font-size: 1.3125em;
+    color: #8D8D8D;
+    font-size: 1.25em;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -64,11 +70,20 @@ a.logo {
 }
 
 .btn {
+    /* Typography */
     font-family: 'Gotham SSm A', 'Gotham SSm B'; 
     font-weight: 700; 
     font-style: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3em;
+
+    /* Layout */
+    display: block;
+    border: 2px solid black;
+    border-radius: 4px; 
 }
 
     .btn.cta {
