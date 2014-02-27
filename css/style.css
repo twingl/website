@@ -1,17 +1,40 @@
+h1 {
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    font-weight: 300; 
+    font-style: normal;
+}
+
+h2, h3 {
+    font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+    font-weight: 700; 
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+}
+
 a.logo { 
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 202px;
     height: 102px;
+    margin-left: auto;
+    margin-right: auto;
     background: url(../img/logo.png) no-repeat;
     overflow: hidden;
     text-indent: -200%;
-    font-size: 72px;
-    text-align: center;
-    line-height: 150%;
-    letter-spacing: -2px;
-    text-rendering: optimizeLegibility;
-    color:#fff;
-    padding-bottom: 12px;
 }
+
+.btn {
+    font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+    font-weight: 700; 
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+    .btn.cta {
+
+    }
