@@ -208,7 +208,7 @@ p.lead {
 }
 
 
-.btn {
+.btn, button {
     /* Typography */
     font-family: 'Gotham SSm A', 'Gotham SSm B'; 
     font-weight: 500; 
@@ -321,6 +321,8 @@ p.lead {
 
 }
 
+/* Awful 4:30am code begins here */
+
 .russell:before {
     content: "";
     display: block;
@@ -342,4 +344,64 @@ p.lead {
     border-bottom: 2px solid #FAF9F7;
     position: absolute;
     bottom: -2px;
+}
+
+
+.chrome {
+    display: none;
+}
+
+.isChrome .chrome {
+    display: block;
+}
+
+.isChrome .notChrome {
+    display: none;
+}
+
+input[type="email"] {
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 1em;
+    text-align: center;
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    font-weight: 300; 
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+input[type="submit"] {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    line-height: 3em;
+    padding: 19px 32px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+}
+
+#mc_embed_signup {
+    position: relative;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin: 0;
+    
+    background-color: #6B0505;
+    font-weight: bold;
+    z-index: 1;
+    color: #FFF;
+    position: absolute;
+    width: 420px;
+    text-align: center;
+    bottom: -72px;
+    height: 48px;
+    font-size: 80%;
+    left: 27%;
+    margin-left: -210px;
+    border-radius: 8px;
+    line-height: 48px;
+
 }
