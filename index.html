@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Twingl - Gather your thoughts.</title>	
+	
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png" />	
+	
+  <!-- jQuery -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	
+  <!-- Check if user is on Chrome --> 
+	<script type="text/javascript">
+		// Check to see if we're on Google Chrome or not. 
+		var isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
+		// Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+		var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+		var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+		// At least Safari 3+: "[object HTMLElementConstructor]"
+		var isChrome = !!window.chrome;                          // Chrome 1+
+		var isIE = /*@cc_on!@*/false;                            // At least IE6
+
+		$(document).ready(function() {
+			if(isChrome) {
+				$(".wrapper").addClass("isChrome");
+			} else {
+				console.log("isn't chrome")
+			}
+		});
+	</script>
+	
+  <!-- Mailchimp
+		Remember, you use a hidden field to specify the interest of the user. -->
+	<script type="text/javascript">
+		var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+		try {
+		    var jqueryLoaded=jQuery;
+		    jqueryLoaded=true;
+		} catch(err) {
+		    var jqueryLoaded=false;
+		}
+		var head= document.getElementsByTagName('head')[0];
+		if (!jqueryLoaded) {
+		    var script = document.createElement('script');
+		    script.type = 'text/javascript';
+		    script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+		    head.appendChild(script);
+		    if (script.readyState && script.onload!==null){
+		        script.onreadystatechange= function () {
+		              if (this.readyState == 'complete') mce_preload_check();
+		        }    
+		    }
+		}
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+		head.appendChild(script);
+		var err_style = '';
+		try{
+		    err_style = mc_custom_error_style;
+		} catch(e){
+		    err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+		}
+		var head= document.getElementsByTagName('head')[0];
+		var style= document.createElement('style');
+		style.type= 'text/css';
+		if (style.styleSheet) {
+		  style.styleSheet.cssText = err_style;
+		} else {
+		  style.appendChild(document.createTextNode(err_style));
+		}
+		head.appendChild(style);
+		setTimeout('mce_preload_check();', 250);
+
+		var mce_preload_checks = 0;
+		function mce_preload_check(){
+		    if (mce_preload_checks>40) return;
+		    mce_preload_checks++;
+		    try {
+		        var jqueryLoaded=jQuery;
+		    } catch(err) {
+		        setTimeout('mce_preload_check();', 250);
+		        return;
+		    }
+		    try {
+		        var validatorLoaded=jQuery("#fake-form").validate({});
+		    } catch(err) {
+		        setTimeout('mce_preload_check();', 250);
+		        return;
+		    }
+		    mce_init_form();
+		}
+		function mce_init_form(){
+		    jQuery(document).ready( function($) {
+		      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+		      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+		      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+		      options = { url: 'http://twin.us7.list-manage.com/subscribe/post-json?u=761a184ba582869b6168d7a60&id=cd338d9315&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+		                    beforeSubmit: function(){
+		                        $('#mce_tmp_error_msg').remove();
+		                        $('.datefield','#mc_embed_signup').each(
+		                            function(){
+		                                var txt = 'filled';
+		                                var fields = new Array();
+		                                var i = 0;
+		                                $(':text', this).each(
+		                                    function(){
+		                                        fields[i] = this;
+		                                        i++;
+		                                    });
+		                                $(':hidden', this).each(
+		                                    function(){
+		                                        var bday = false;
+		                                        if (fields.length == 2){
+		                                            bday = true;
+		                                            fields[2] = {'value':1970};//trick birthdays into having years
+		                                        }
+		                                    	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+		                                    		this.value = '';
+											    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+		                                    		this.value = '';
+											    } else {
+											        if (/\[day\]/.test(fields[0].name)){
+		    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+											        } else {
+		    	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+			                                        }
+			                                    }
+		                                    });
+		                            });
+		                        return mce_validator.form();
+		                    }, 
+		                    success: mce_success_cb
+		                };
+		      $('#mc-embedded-subscribe-form').ajaxForm(options);
+		      
+		      
+		    });
+		}
+		function mce_success_cb(resp){
+		    $('#mce-success-response').hide();
+		    $('#mce-error-response').hide();
+		    if (resp.result=="success"){
+		        $('#mce-'+resp.result+'-response').show();
+		        $('#mce-'+resp.result+'-response').html(resp.msg);
+		        $('#mc-embedded-subscribe-form').each(function(){
+		            this.reset();
+		    	});
+
+		    } else {
+		        var index = -1;
+		        var msg;
+		        try {
+		            var parts = resp.msg.split(' - ',2);
+		            if (parts[1]==undefined){
+		                msg = resp.msg;
+		            } else {
+		                i = parseInt(parts[0]);
+		                if (i.toString() == parts[0]){
+		                    index = parts[0];
+		                    msg = parts[1];
+		                } else {
+		                    index = -1;
+		                    msg = resp.msg;
+		                }
+		            }
+		        } catch(e){
+		            index = -1;
+		            msg = resp.msg;
+		        }
+		        try{
+		            if (index== -1){
+		                $('#mce-'+resp.result+'-response').show();
+		                $('#mce-'+resp.result+'-response').html(msg);            
+		            } else {
+		                err_id = 'mce_tmp_error_msg';
+		                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+		                
+		                var input_id = '#mc_embed_signup';
+		                var f = $(input_id);
+		                if (ftypes[index]=='address'){
+		                    input_id = '#mce-'+fnames[index]+'-addr1';
+		                    f = $(input_id).parent().parent().get(0);
+		                } else if (ftypes[index]=='date'){
+		                    input_id = '#mce-'+fnames[index]+'-month';
+		                    f = $(input_id).parent().parent().get(0);
+		                } else {
+		                    input_id = '#mce-'+fnames[index];
+		                    f = $().parent(input_id).get(0);
+		                }
+		                if (f){
+		                    $(f).append(html);
+		                    $(input_id).focus();
+		                } else {
+		                    $('#mce-'+resp.result+'-response').show();
+		                    $('#mce-'+resp.result+'-response').html(msg);
+		                }
+		            }
+		        } catch(e){
+		            $('#mce-'+resp.result+'-response').show();
+		            $('#mce-'+resp.result+'-response').html(msg);
+		        }
+		    }
+		}
+	</script>  
+
+  <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- Google Analytics --> 
+  <script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-43678647-3', 'twin.gl');
+  	ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body>
+  <a class="logo">twingl</a>
+  <h1>Gather your thoughts.</h1><!-- Title -->
+  <p class="lead">Twingl is a personal library for your notes and readings that works like your brain.<br/>If you read to learn or write to think, Twingl will help you stay organised more naturally. <br/>Spend less time on organisation, and more time on the things you love. </p><!-- Lead -->
+	
+  <h2>Get Started</h2> <!-- Title -->
+  <p>Twingl is in very early beta. Your feedback will be greatly appreciated!</p><!-- Subtitle -->
+  <a href="http://api.twin.gl/">Sign in <span>or</span> Sign Up</a>	
+	  	
+	<h2>How it Works</h2> <!-- Title -->
+  <ul>
+    <li><!-- Container number 1. Probably classed "collect"-->
+      <h3>Collect</h3> <!-- Title -->
+      <p>Read with pencil in hand.</p><!-- Subtitle -->
+      <p>When you discover an idea <strong>that makes you stop and think</strong>, highlight it with the browser extension. Then, you can write down any thoughts you've had without breaking your concentration.</p>
+    </li>
+    <li><!-- Container number 1. Probably classed "collect"-->
+      <h3>Connect</h3> <!-- Title -->
+      <p>Lay trails across the web.</p><!-- Subtitle -->
+      <p>When <strong>one idea reminds you of another</strong>, you can link between them.  You can follow these links again later, retracing your steps over the web. </p>
+    </li>
+    <li><!-- Container number 1. Probably classed "collect"-->
+      <h3>Consult</h3> <!-- Title -->
+      <p>Remember more of what you read</p><!-- Subtitle -->
+      <p>What’s the point of saving all this stuff if you never look at it? Twingl collates all of your findings into an online journal. You can flick back day by day and re-trace your steps. <strong>It’s like having your own personal Wikipedia.</strong></p>
+    </li>
+  </ul>
+
+  <h2>Get in Touch</h2>
+  <ul>
+    <li>
+      <h3>Stay in the loop</h3>
+      <a href="#">Read our Blog</a>
+    </li>
+    <li>
+      <h3>Say hello</h3>
+      <a href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+    </li>
+    <li>
+      <h3>Serenade us on Twitter</h3>
+      <a href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+    </li>
+  </ul>
+
+	<!-- <div class="notChrome">
+    <h3>Coming soon</h3>
+    <p class="center">The extension is only out for Chrome at the moment, but sign up below and we’ll tell you when the Bookmarklet lands.</p>
+    <div id="mc_embed_signup" class="cta">
+      <form action="http://twin.us7.list-manage.com/subscribe/post?u=761a184ba582869b6168d7a60&amp;id=cd338d9315" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div class="mc-field-group">
+          <label for="mce-EMAIL" style="display:none">Email Address</label>
+          <input type="email" value="" name="EMAIL" placeholder="hello@twin.gl" class="required email" id="mce-EMAIL">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn signup">
+        </div>
+        <div class="mc-field-group" style="display:none">
+          <label for="mce-group[609]">Interested in </label>
+          <select name="group[609]" class="REQ_CSS" id="mce-group[609]" >
+            <option value=""></option>
+            <option value="1">Platform</option>
+            <option value="4">Applications</option>
+            <option value="8" selected="selected">Browser Extension</option>
+          </select>
+        </div>
+        <div id="mce-responses" class="clearfix">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+      </form>
+    </div>
+  </div> -->
+</body>
+</html>
