@@ -2,18 +2,64 @@
 /* TODO: Refactor the heading/body sizes onto a typographic scale. */
 body {
     background-color: #FAF9F7;
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: normal;
+    line-height: 146%;
+    margin-bottom: 2em
 }
 
+strong { 
+    font-weight: 700;
+}
 header {
+    /* Styling */
     background-image: -o-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
     background-image: -moz-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
     background-image: -webkit-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
     background-image: -ms-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
-    background-image: radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
+    background-image: radial-gradient(40% 80%, #9E1452 10%, #4C0921 120%);
+
+    /* Layout */
+    min-height: 240px;
+    position: relative;
+
+    border-bottom: 2px solid #000;
 }
+
+a.logo { 
+    display: block;
+    width: 159px;
+    height: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../img/twingl@2x.png) no-repeat;
+    background-size: 159px 85px;
+    overflow: hidden;
+    text-indent: -200%;
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -43px;
+       
+}
+
 
 section {
     clear: both;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+small {
+    font-size: 0.66666667em;
 }
 
 section.hero {
@@ -24,9 +70,15 @@ h1 {
     font-family: 'Whitney SSm A', 'Whitney SSm B'; 
     font-weight: 300; 
     font-style: normal;
-    font-size: 4em;
+    font-size: 3.5em;
     letter-spacing: -0.03em;
+    line-height: 100%;
     -webkit-font-smoothing: antialiased;
+}
+
+.hero h1 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
 }
 
 h2, h3 {
@@ -36,6 +88,40 @@ h2, h3 {
     letter-spacing: 1px;
     text-align: center;
     font-size: 0.75em;
+}
+
+h2 {
+    margin-top: 5.333333333em;
+    position: relative;
+}
+
+h3 {
+    position: relative;
+    color: #888;
+}
+
+h2 span:before, h2 span:after,
+h3 span:before, h3 span:after {
+    border-top: 1px solid black;
+    display: block;
+    height: 1px;
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 36%;
+}
+
+h2 span:before, h2 span:after {
+    width: 40%;
+}
+
+h3 span:before, h3 span:after {
+    border-top: 1px solid #88;
+    width: 25%;
+}
+h2 span:after, h3 span:after {
+   right: 0;  
+   left: auto; 
 }
 
 p {
@@ -52,49 +138,208 @@ p.lead {
     -webkit-font-smoothing: antialiased;
 }
 
-p.subtitle {
+.subtitle {
     font-style: italic;
     text-align: center;
     font-size: 0.875em;
+    margin-top: 0.1em;
+    margin-bottom: 1em;
+    color: #999;
+    display: block;
 }
 
-a.logo { 
+.saas-module {
+    padding-top: 12em;
     display: block;
-    width: 202px;
-    height: 102px;
-    margin-left: auto;
-    margin-right: auto;
-    background: url(../img/logo.png) no-repeat;
-    overflow: hidden;
-    text-indent: -200%;
+
 }
+.saas-module.collect {
+    background: url(../img/icon-collect.png) 50% 3em no-repeat;
+}
+    .saas-module.collect:hover {
+        background: url(../img/collect-hover.png) 50% 3em no-repeat;   
+    }
+.saas-module.connect {
+    background: url(../img/icon-connect.png) 50% 3em no-repeat;
+}
+    .saas-module.connect:hover {
+        background: url(../img/connect-hover.png) 50% 3em no-repeat;   
+    }
+
+.saas-module.consult {
+    background: url(../img/icon-consult.png) 50% 3em no-repeat;
+}
+
+    .saas-module.consult:hover {
+        background: url(../img/consult-hover.png) 50% 3em no-repeat;   
+    }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .saas-module.connect {
+        background: url(../img/icon-connect@2x.png) 50% 3em no-repeat;
+        background-size: 85px 97px;
+    }
+        .saas-module.connect:hover {
+            background: url(../img/connect-hover@2x.png) 50% 3em no-repeat;
+            background-size: 85px 97px;
+        }
+
+    .saas-module.connect {
+        background: url(../img/icon-connect@2x.png) 50% 3em no-repeat;
+        background-size: 85px 97px;
+    }
+        .saas-module.connect:hover {
+            background: url(../img/connect-hover@2x.png) 50% 3em no-repeat;
+            background-size: 85px 97px;
+        }
+
+    .saas-module.consult {
+        background: url(../img/icon-consult@2x.png) 50% 3em no-repeat;
+        background-size: 81px 100px;
+    }
+        .saas-module.consult:hover {
+            background: url(../img/consult-hover@2x.png) 50% 3em no-repeat;
+            background-size: 81px 100px;
+        }
+}
+
+.saas-module p {
+    font-size: 0.875em;
+}
+
 
 .btn {
     /* Typography */
     font-family: 'Gotham SSm A', 'Gotham SSm B'; 
-    font-weight: 700; 
+    font-weight: 500; 
     font-style: normal;
-    letter-spacing: 1px;
+    letter-spacing: 0.111111111em;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
     line-height: 3em;
+    color: #000;
 
     /* Layout */
     display: block;
-    border: 2px solid black;
-    border-radius: 4px; 
+
 }
+    .btn.btn-secondary {
+        border: 2px solid black;
+        border-radius: 4px;
+        font-size: 0.6em;
+        line-height: 4em
+    } 
+
+    .btn.btn-disabled {
+        border-color: #ccc!important;
+        color: #ccc!important;
+        background-color: transparent!important;
+    }
+
+    .btn.btn-secondary:hover {
+        background-color: #9E1452;
+        color: #FAF9F7;
+    } 
 
     .btn.cta {
+        margin-top: 2em;
+
+        letter-spacing: 2px;
+        text-shadow: -1px -1px 0px rgba(0,0,0,0.50);
+
+        font-size: 1.125em;
+        line-height: 3.555555556em;
+
+        text-shadow: -1px -1px 0px rgba(0,0,0,0.50);
+
+        -webkit-font-smoothing: antialiased;
+        color: #fff;
+        display: inline-block;
+        padding-left: 5em;
+        padding-right: 5em;
+        border-radius: 6px;
+        
+        background: #75b33c; /* Old browsers */
+        background: -moz-linear-gradient(-87deg,  #75b33c 0%, #438f28 100%); /* FF3.6+ */
+        background: -webkit-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* IE10+ */
+        background: linear-gradient(177deg,  #75b33c 0%,#438f28 100%); /* W3C */
+
+        -moz-box-shadow:    0px 2px 0px 0px #000000;
+        -webkit-box-shadow: 0px 2px 0px 0px #000000;
+        box-shadow:         0px 2px 0px 0px #000000;
+
+    }
+
+    .btn.cta:hover {
+        background: #80ce38; /* Old browsers */
+        background: -moz-linear-gradient(45deg,  #80ce38 0%, #49ae24 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#80ce38), color-stop(100%,#49ae24)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* IE10+ */
+        background: linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ce38', endColorstr='#49ae24',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
     }
 
 .trinity {
     list-style: none;
+    display: block;
 }
 
 .trinity li {
-    width: 33%;
+    width: 33.333333333333333333333%;
     float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.trinity:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.russell {
+     height:32px;
+     width:64px;
+     border-radius: 64px 64px 0 0;
+     -moz-border-radius: 64px 64px 0 0;
+     -webkit-border-radius: 64px 64px 0 0;
+     background-color: #FAF9F7;
+     position: absolute;
+     bottom: -2px;
+     left: 50%;
+     margin-left: -32px;
+     border: 2px solid black;
+
+}
+
+.russell:before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 33px;
+    background-image: url(../img/icon-brain@2x.png);
+    background-size: 38px 33px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 4;
+    margin-left: -19px;
+}
+.russell:after {
+    width:64px;
+    display: block;
+    content: "";
+    border-bottom: 2px solid #FAF9F7;
+    position: absolute;
+    bottom: -2px;
 }
