@@ -81,7 +81,7 @@ h1 {
     margin-bottom: 0.75em;
 }
 
-h2, h3 {
+h2, h3, legend {
     font-family: 'Gotham SSm A', 'Gotham SSm B'; 
     font-weight: 700; 
     font-style: normal;
@@ -414,4 +414,38 @@ input[type="submit"] {
     border-radius: 8px;
     line-height: 48px;
 
+}
+
+fieldset {
+    border: 1px solid #000;
+}
+
+/*you're a bloody */ legend /*mate*/ {
+    padding: 0 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+label {
+    font-size: 0.8em;
+    max-width: 33em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+textarea {
+    width: 35em;
+    height: 8em;
+    padding: 1em;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+form p {
+    
 }
