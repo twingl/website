@@ -146,6 +146,10 @@ p.lead {
     margin-bottom: 1em;
     color: #999;
     display: block;
+    max-width: 50em;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .saas-module {
@@ -242,7 +246,7 @@ p.lead {
         color: #FAF9F7;
     } 
 
-    .btn.cta {
+    .btn.btn-cta {
         margin-top: 2em;
 
         letter-spacing: 2px;
@@ -273,7 +277,7 @@ p.lead {
 
     }
 
-    .btn.cta:hover {
+    .btn.btn-cta:hover {
         background: #80ce38; /* Old browsers */
         background: -moz-linear-gradient(45deg,  #80ce38 0%, #49ae24 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#80ce38), color-stop(100%,#49ae24)); /* Chrome,Safari4+ */
@@ -359,27 +363,33 @@ p.lead {
     display: none;
 }
 
+input[type="email"], input[type="submit"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 input[type="email"] {
     border: 2px solid black;
     border-radius: 2px;
-    padding: 1em;
+    
     text-align: center;
     font-family: 'Whitney SSm A', 'Whitney SSm B'; 
     font-weight: 300; 
     font-style: normal;
     font-size: 1em;
     margin-top: 1em;
+    height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    width: 400px;
 }
 
 input[type="submit"] {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    line-height: 3em;
-    padding: 19px 32px;
-    position: relative;
-    top: -2px;
-    cursor: pointer;
+   height: 64px;
+   line-height: 64px;
+   border:none;
+   cursor: pointer;
 }
 
 #mc_embed_signup {
