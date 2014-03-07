@@ -130,10 +130,11 @@
 		            this.reset();
 		    	});
 
-		        analytics.track('Submitted Email Address', {
-		        });
+          analytics.track('Submitted Email Address', {
+          });
 
-                window.location.href = "/greatsuccess/";
+          var email = $('#mce-EMAIL').val();
+          window.location.href = "/greatsuccess/?email="+encodeURIComponent(email);
 
 		    } else {
 		        var index = -1;
