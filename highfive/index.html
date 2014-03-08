@@ -20,10 +20,6 @@
   window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;window.analytics.methods.length>i;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
   window.analytics.load("xpi4dw8dr9");
   window.analytics.page();
-
-  analytics.track('Reached Thank You Page', {
-  });
-
   </script>
 
 </head>
@@ -40,18 +36,18 @@
 
     <h2><span>About Us</span></h2>
     <span class="subtitle">So what is this Twingl thing, anyway?</span>
-    <p>Our <a href="http://blog.twin.gl">inaugural blog post</a> is just the ticket!</p>
+    <p>Our <a id="blog-post-link" href="http://blog.twin.gl">inaugural blog post</a> is just the ticket!</p>
 
 
     <h2><span>Link Love</span></h2>
     <span class="subtitle">Fancy a read, or three?</span>
-    <p>Clive Thompson's book <a href="http://www.amazon.com/Smarter-Than-You-Think-Technology/dp/1594204454/">Smarter Than You Think</a> explores how technology is improving our ability to think. You can read a free excerpt on "Public Thinking"—how writing for an audience clarifies our thinking—over in <a href="https://readmill.com/books/public-thinking-adapted-from-smarter-than-you-think">Readmill</a>, our favourite ebook reader.</p>
-    <blockquote>&ldquo;The idea [is] that creativity is combinatorial, that nothing is entirely original, that everything builds on what came before, and that we create by taking existing pieces of inspiration, knowledge, skill and insight that we gather over the course of our lives and recombining them into incredible new creations.&rdquo; — Maria Popova, <a href="http://www.brainpickings.org/index.php/2011/08/01/networked-knowledge-combinatorial-creativity/">Networked Knowledge and Combinatorial Creativity</a>.</blockquote>
-    <p>We simply love, Robin Sloan's <a href="https://readtapestry.com/s/YuyuuzQO8/">Fish</a>.</p>
+    <p>Clive Thompson's book Smarter Than You Think explores how technology is improving our ability to think. You can read a free excerpt on "Public Thinking"—how writing for an audience clarifies our thinking—over in <a id="styt-link" href="https://readmill.com/books/public-thinking-adapted-from-smarter-than-you-think">Readmill</a>, our favourite ebook reader.</p>
+    <blockquote>&ldquo;The idea [is] that creativity is combinatorial, that nothing is entirely original, that everything builds on what came before, and that we create by taking existing pieces of inspiration, knowledge, skill and insight that we gather over the course of our lives and recombining them into incredible new creations.&rdquo; — Maria Popova, <a id="bp-link" href="http://www.brainpickings.org/index.php/2011/08/01/networked-knowledge-combinatorial-creativity/">Networked Knowledge and Combinatorial Creativity</a>.</blockquote>
+    <p>We simply love, Robin Sloan's <a id="fish-link" href="https://readtapestry.com/s/YuyuuzQO8/">Fish</a>.</p>
 
     <h2><span>Now What?</span></h2>
     <span class="subtitle">What's next for our brave hero, you wonder.</span>
-    <p>We're pouring through everything you've told us and reconciling it with other respondants. When we have a plan of attack, you'll be the first to hear about it. Promise :-). If you know of other writers, we'd appreciate hearing from them too. Perhaps you could <a href="https://twitter.com/home?status=The%20folk%20at%20@LetsTwingl%20want%20to%20simplify%20your%20writing%20workflow.%20What's%20your%20biggest%20sticking%20point?%20Let%20them%20know%20at:%20http://twin.gl/">refer them to us?</a>?</p>
+    <p>We're pouring through everything you've told us and reconciling it with other respondants. When we have a plan of attack, you'll be the first to hear about it. Promise :-). If you know of other writers, we'd appreciate hearing from them too. Perhaps you could <a id="twitter-msg-link" href="https://twitter.com/home?status=The%20folk%20at%20@LetsTwingl%20want%20to%20simplify%20your%20writing%20workflow.%20What's%20your%20biggest%20sticking%20point?%20Let%20them%20know%20at:%20http://twin.gl/">refer them to us?</a>?</p>
 
   </section>
 
@@ -60,19 +56,32 @@
     <ul class="trinity">
       <li>
         <span class="subtitle">Stay in the loop</span>
-        <a class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
+        <a id="blog-btn" class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
       </li>
       <li>
         <span class="subtitle">Say hello</span>
-        <a class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
       </li>
       <li>
         <span class="subtitle">Serenade us on Twitter</span>
-        <a class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+        <a id="twitter-btn" class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
       </li>
     </ul>
   </section>
 
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+
+    // Outbound Link Tracking
+    var link4 = document.getElementById('blog-post-link'); analytics.trackLink(link4, 'Clicked on Blog Post Link', {});
+    var link5 = document.getElementById('styt-link'); analytics.trackLink(link5, 'Clicked on STYT Link', {});
+    var link6 = document.getElementById('bp-link'); analytics.trackLink(link6, 'Clicked on Brain Pickings Link', {});
+    var link7 = document.getElementById('fish-link'); analytics.trackLink(link7, 'Clicked on Fish Link', {});
+    var link8 = document.getElementById('twitter-msg-link'); analytics.trackLink(link8, 'Clicked on Twitter Message Link', {});
+  </script>
     
 </body>
 </html>

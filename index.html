@@ -254,19 +254,25 @@
     <ul class="trinity">
       <li>
         <span class="subtitle">Stay in the loop</span>
-        <a class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
+        <a id="blog-btn" class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
       </li>
       <li>
         <span class="subtitle">Say hello</span>
-        <a class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
       </li>
       <li>
         <span class="subtitle">Serenade us on Twitter</span>
-        <a class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+        <a id="twitter-btn" class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
       </li>
     </ul>
   </section>
 
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+  </script>
 	
 </body>
 </html>
