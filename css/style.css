@@ -463,3 +463,9 @@ fieldset p:last-child {
 fieldset p.first {
     margin-top: 1.75em;
 }
+
+.fine-print {
+    color: #aaa;
+    margin-top: 1em;
+    display: block;
+}
