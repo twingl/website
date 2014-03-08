@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Twingl - Gather your thoughts.</title>	
-	<link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7002032/717782/css/fonts.css" />
 
@@ -121,6 +121,7 @@
 		    });
 		}
 		function mce_success_cb(resp){
+        var email = $('#mce-EMAIL').val();
 		    $('#mce-success-response').hide();
 		    $('#mce-error-response').hide();
 		    if (resp.result=="success"){
@@ -130,10 +131,10 @@
 		            this.reset();
 		    	});
 
-		        analytics.track('Submitted Email Address', {
-		        });
+          analytics.track('Submitted Email Address', {
+          });
 
-                window.location.href = "/greatsuccess/";
+          window.location.href = "/greatsuccess/?email="+encodeURIComponent(email);
 
 		    } else {
 		        var index = -1;
@@ -210,7 +211,7 @@
 
 <body>
   <header>
-    <a class="logo">twingl</a>
+    <a class="logo" href="http://twin.gl/">twingl</a>
     <div class="russell">&nbsp;</div>
   </header>
   
@@ -234,7 +235,8 @@
               <option value=""></option>
               <option value="1">Platform</option>
               <option value="4">Applications</option>
-              <option value="8" selected="selected">Browser Extension</option>
+              <option value="8" >Browser Extension</option>
+              <option value="16" selected="selected">Writing</option>
             </select>
           </div>
           <div id="mce-responses" class="clearfix">

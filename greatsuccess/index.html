@@ -22,11 +22,36 @@
   window.analytics.page();
   </script>
 
+  <script type="text/javascript">
+    function getQueryParams(qs) {
+        qs = qs.split("+").join(" ");
+
+        var params = {}, tokens,
+            re = /[?&]?([^=]+)=([^&]*)/g;
+
+        while (tokens = re.exec(qs)) {
+            params[decodeURIComponent(tokens[1])]
+                = decodeURIComponent(tokens[2]);
+        }
+
+        return params;
+    }
+
+    $(document).ready(function() {
+      $('#sign-in-up').click(function (e) {
+        analytics.track('Clicked Sign Up/Sign In button');
+      });
+
+      var email = getQueryParams(document.location.search).email;
+      $('#entry_747532890').val(email);
+    })
+    
+  </script>
 </head>
 
 <body>
   <header>
-    <a class="logo">twingl</a>
+    <a class="logo" href="http://twin.gl/">twingl</a>
     <div class="russell">&nbsp;</div>
   </header>
   
@@ -35,25 +60,36 @@
     <p class="lead">Thanks so much for your interest. If you have a moment, would you mind answering a few questions about your current workflow? </p><!-- Lead -->
     
 
-    <form>
+    <script type="text/javascript" charset="utf-8"> var submitted = false; </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { window.location = 'twin.gl/'; }"></iframe>
+
+    <form action="https://docs.google.com/forms/d/1L2OIjb0b6H6nTkaFeZztkPtJjhWRngmQn9VgV4RsNdk/formResponse" id="ss-form" method="post" name="ss-form" onsubmit="" target="hidden_iframe">
       <fieldset>
+        <input type="hidden" name="draftResponse" value="[,,&quot;-3644473337518500318&quot;] ">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fromEmail" value="false">
+        <input type="hidden" name="fbzx" value="-3644473337518500318">
+        <input type="hidden" name="entry.747532890" value="" id="entry_747532890">
+
         <legend>A few questions</legend>
         <p>
-          <label for="current_blog">Where do you blog?</label>
-          <input type="text" name="current_blog" id="size_1" placeholder="List URL(s) here, if applicable." />
+          <label for="entry_775067916">Where do you blog?</label>
+          <input type="text" name="entry.775067916" id="entry_775067916" placeholder="List URL(s) here, if applicable." />
         </p>
         <p>
-          <label for="current_blog">What does your toolchain look like right now? On which apps and devices do you like to do your reading, research, and writing?</label>
-          <textarea></textarea>
+          <label for="entry_300777235">What does your toolchain look like right now? On which apps and devices do you like to do your reading, research, and writing?</label>
+          <textarea id="entry_300777235" name="entry.300777235"></textarea>
         </p>
         <p>
-          <label for="current_blog">What is the biggest sticking point in your workflow right now? What part of getting a blog post out the door just sucks?</label>
-          <textarea></textarea>
+          <label for="entry_1094042602">What is the biggest sticking point in your workflow right now? What part of getting a blog post out the door just sucks?</label>
+          <textarea id="entry_1094042602" name="entry.1094042602"></textarea>
         </p>
         <p>
-          <label for="current_blog">If you could wave a magic wand and have a perfect app, what would your dream blogging workflow look like?</label>
-          <textarea></textarea>
+          <label for="entry_1218850423">If you could wave a magic wand and have a perfect app, what would your dream blogging workflow look like?</label>
+          <textarea id="entry_1218850423" name="entry.1218850423"></textarea>
         </p>
+
+        <input type="submit" name="submit" value="Submit" />
       </fieldset>
     </form>
     <h2><span>Where do you blog?</span></h2>
