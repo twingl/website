@@ -25,7 +25,13 @@ header {
 
     border-bottom: 2px solid #000;
 }
-
+a {
+    color: #9E1452;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 a.logo { 
     display: block;
     width: 159px;
@@ -483,5 +489,35 @@ img.awesome {
 }
 
     .high-five a {
-        color: #9E1452;
+        
     }
+
+/* REFACTOR THIS WHEN WE DO OUR BLOG */
+#thanks h3 {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: italic;
+    letter-spacing: auto;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+blockquote p {
+    font-style: italic;
+    quotes: '“' '”'
+}
+
+blockquote p:before {
+    content: open-quote;
+}
+blockquote p:after {
+    content: close-quote;
+}
+blockquote b {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+blockquote b:before {
+    content: "— ";
+}
