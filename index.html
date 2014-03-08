@@ -121,6 +121,7 @@
 		    });
 		}
 		function mce_success_cb(resp){
+        var email = $('#mce-EMAIL').val();
 		    $('#mce-success-response').hide();
 		    $('#mce-error-response').hide();
 		    if (resp.result=="success"){
@@ -133,7 +134,6 @@
           analytics.track('Submitted Email Address', {
           });
 
-          var email = $('#mce-EMAIL').val();
           window.location.href = "/greatsuccess/?email="+encodeURIComponent(email);
 
 		    } else {
