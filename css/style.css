@@ -25,7 +25,13 @@ header {
 
     border-bottom: 2px solid #000;
 }
-
+a {
+    color: #9E1452;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 a.logo { 
     display: block;
     width: 159px;
@@ -81,7 +87,7 @@ h1 {
     margin-bottom: 0.75em;
 }
 
-h2, h3 {
+h2, h3, legend {
     font-family: 'Gotham SSm A', 'Gotham SSm B'; 
     font-weight: 700; 
     font-style: normal;
@@ -146,6 +152,10 @@ p.lead {
     margin-bottom: 1em;
     color: #999;
     display: block;
+    max-width: 50em;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .saas-module {
@@ -242,7 +252,7 @@ p.lead {
         color: #FAF9F7;
     } 
 
-    .btn.cta {
+    .btn.btn-cta {
         margin-top: 2em;
 
         letter-spacing: 2px;
@@ -273,7 +283,7 @@ p.lead {
 
     }
 
-    .btn.cta:hover {
+    .btn.btn-cta:hover {
         background: #80ce38; /* Old browsers */
         background: -moz-linear-gradient(45deg,  #80ce38 0%, #49ae24 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#80ce38), color-stop(100%,#49ae24)); /* Chrome,Safari4+ */
@@ -359,27 +369,33 @@ p.lead {
     display: none;
 }
 
+input[type="email"], input[type="submit"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 input[type="email"] {
     border: 2px solid black;
     border-radius: 2px;
-    padding: 1em;
+    
     text-align: center;
     font-family: 'Whitney SSm A', 'Whitney SSm B'; 
     font-weight: 300; 
     font-style: normal;
     font-size: 1em;
     margin-top: 1em;
+    height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    width: 400px;
 }
 
 input[type="submit"] {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    line-height: 3em;
-    padding: 19px 32px;
-    position: relative;
-    top: -2px;
-    cursor: pointer;
+   height: 64px;
+   line-height: 64px;
+   border:none;
+   cursor: pointer;
 }
 
 #mc_embed_signup {
@@ -404,4 +420,104 @@ input[type="submit"] {
     border-radius: 8px;
     line-height: 48px;
 
+}
+
+fieldset {
+    border: 1px solid #000;
+    padding-bottom: 2em;
+    margin-top: 4em;
+}
+
+/*you're a bloody */ legend /*mate*/ {
+    padding: 0 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+label {
+    font-size: 1em;
+    max-width: 40em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+    line-height: 150%;
+}
+
+
+textarea {
+    width: 35em;
+    height: 8em;
+    padding: 1em;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+form p {
+    margin-top: 4.5em;
+    margin-bottom: 2em;
+    font-style: italic;
+}
+
+fieldset p:last-child {
+    margin-bottom: 0;
+}
+
+fieldset p.first {
+    margin-top: 1.75em;
+}
+
+.fine-print {
+    color: #aaa;
+    margin-top: 1em;
+    display: block;
+}
+
+img.awesome {
+    border-radius: 50%;
+    margin-top: 4em;
+    border: 3px solid black;
+}
+
+.high-five {
+    text-align: left;
+    max-width: 600px;
+    margin: 0px auto 30px auto;
+}
+
+    .high-five a {
+        
+    }
+
+/* REFACTOR THIS WHEN WE DO OUR BLOG */
+#thanks h3 {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: italic;
+    letter-spacing: auto;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+blockquote p {
+    font-style: italic;
+    quotes: '“' '”'
+}
+
+blockquote p:before {
+    content: open-quote;
+}
+blockquote p:after {
+    content: close-quote;
+}
+blockquote b {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+blockquote b:before {
+    content: "— ";
 }

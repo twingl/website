@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Twingl - Gather your thoughts.</title>	
-	<link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7002032/717782/css/fonts.css" />
 
@@ -11,26 +11,6 @@
 	
   <!-- jQuery -->
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	
-  <!-- Check if user is on Chrome --> 
-	<script type="text/javascript">
-		// Check to see if we're on Google Chrome or not. 
-		var isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
-		// Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
-		var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
-		var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-		// At least Safari 3+: "[object HTMLElementConstructor]"
-		var isChrome = !!window.chrome;                          // Chrome 1+
-		var isIE = /*@cc_on!@*/false;                            // At least IE6
-
-		$(document).ready(function() {
-			if(isChrome) {
-				$(".wrapper").addClass("isChrome");
-			} else {
-				console.log("isn't chrome")
-			}
-		});
-	</script>
 	
   <!-- Mailchimp
 		Remember, you use a hidden field to specify the interest of the user. -->
@@ -141,6 +121,7 @@
 		    });
 		}
 		function mce_success_cb(resp){
+        var email = $('#mce-EMAIL').val();
 		    $('#mce-success-response').hide();
 		    $('#mce-error-response').hide();
 		    if (resp.result=="success"){
@@ -149,6 +130,11 @@
 		        $('#mc-embedded-subscribe-form').each(function(){
 		            this.reset();
 		    	});
+
+          analytics.track('Submitted Email Address', {
+          });
+
+          window.location.href = "/greatsuccess/?email="+encodeURIComponent(email);
 
 		    } else {
 		        var index = -1;
@@ -215,100 +201,78 @@
   window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;window.analytics.methods.length>i;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
   window.analytics.load("xpi4dw8dr9");
   window.analytics.page();
+
+  analytics.track('Vistied Landing Page', {
+  });
+
   </script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#sign-in-up').click(function (e) {
-        analytics.track('Clicked Sign Up/Sign In button');
-      }); 
-    })
-    
-  </script>
 </head>
 
 <body>
   <header>
-    <a class="logo">twingl</a>
+    <a class="logo" href="http://twin.gl/">twingl</a>
     <div class="russell">&nbsp;</div>
   </header>
   
   <section class="hero  wrapper">
     <h1>Gather your thoughts.</h1><!-- Title -->
-    <p class="lead">Twingl is a personal library for your notes and readings that works like your brain.<br/>If you read to learn or write to think, Twingl will help you stay organised more naturally. <br/>Spend less time on organisation, and more time on the things you love. </p><!-- Lead -->
+    <p class="lead">Twingl is a tool for online writers. It allows you to organise your thoughts and research surrounding blog posts more naturally, so you spend less time on organisation, and more time in the zone. </p><!-- Lead -->
     
-    <h2><span>Get Started</span></h2>
-    <div class="chrome">
-      <span class="subtitle">Twingl is in very early beta. Your feedback will be greatly appreciated!</span><!-- Subtitle -->
-      <a href="http://api.twin.gl/" class="btn  cta" id="sign-in-up">Sign up <small>or</small> Sign in</a>
-    </div>
-      <div class="notChrome">
-        <span class="subtitle">Sorry, our browser extension only supports Google Chrome at the moment! <br> If you sign up to our mailing list below, we’ll tell you when the Bookmarklet lands.</span>
-        <div id="mc_embed_signup" >
-          <form action="http://twin.us7.list-manage.com/subscribe/post?u=761a184ba582869b6168d7a60&amp;id=cd338d9315" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div class="mc-field-group">
-              <label for="mce-EMAIL" style="display:none">Email Address</label>
-              <input type="email" value="" name="EMAIL" placeholder="hello@twin.gl" class="required email" id="mce-EMAIL">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary  center">
-            </div>
-            <div class="mc-field-group" style="display:none">
-              <label for="mce-group[609]">Interested in </label>
-              <select name="group[609]" class="REQ_CSS" id="mce-group[609]" >
-                <option value=""></option>
-                <option value="1">Platform</option>
-                <option value="4">Applications</option>
-                <option value="8" selected="selected">Browser Extension</option>
-              </select>
-            </div>
-            <div id="mce-responses" class="clearfix">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-          </form>
-        </div>
+    <h2><span>Get involved</span></h2>
+    <div>
+      <span class="subtitle">We&apos;re in private alpha right now. If you drop your email address below, we&apos;ll invite you when a space opens up, and you&apos;ll have the chance to be actively involved in the design process.</span>
+      <div id="mc_embed_signup" >
+        <form action="http://twin.us7.list-manage.com/subscribe/post?u=761a184ba582869b6168d7a60&amp;id=cd338d9315" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div class="mc-field-group">
+            <label for="mce-EMAIL" style="display:none">Email Address</label>
+            <input type="email" value="" name="EMAIL" placeholder="hello@twin.gl" class="required email" id="mce-EMAIL">
+            <input type="submit" value="I&apos;m interested!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-cta  center">
+          </div>
+          <div class="mc-field-group" style="display:none">
+            <label for="mce-group[609]">Interested in </label>
+            <select name="group[609]" class="REQ_CSS" id="mce-group[609]" >
+              <option value=""></option>
+              <option value="1">Platform</option>
+              <option value="4">Applications</option>
+              <option value="8" >Browser Extension</option>
+              <option value="16" selected="selected">Writing</option>
+            </select>
+          </div>
+          <div id="mce-responses" class="clearfix">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
+        </form>
       </div>
+    </div>
+
   </section>
-  
-  <section class="wrapper">
-    <h2><span>How it works</span></h2>
-    <ul class="trinity">
-      <li class="saas-module  collect"><!-- Container number 1. Probably classed "collect"-->
-        <h3><span>Collect</span></h3> <!-- Title -->
-        <span class="subtitle">Read with pencil in hand.</span><!-- Subtitle -->
-        <p>When you discover an idea <strong>that makes you stop and think</strong>, highlight it with the browser extension. Then, you can write down any thoughts you've had without breaking your concentration.</p>
-      </li>
-      <li class="saas-module  connect"><!-- Container number 1. Probably classed "collect"-->
-        <h3><span>Connect</span></h3> <!-- Title -->
-        <span class="subtitle">Lay trails across the web.</span><!-- Subtitle -->
-        <p>When <strong>one idea reminds you of another</strong>, you can link between them.  You can follow these links again later, retracing your steps over the web. </p>
-      </li>
-      <li class="saas-module  consult"><!-- Container number 1. Probably classed "collect"-->
-        <h3><span>Consult</span></h3> <!-- Title -->
-        <span class="subtitle">Remember more of what you read</span><!-- Subtitle -->
-        <p>What’s the point of saving all this stuff if you never look at it? Twingl collates all of your findings into an online journal. You can flick back day by day and re-trace your steps. <strong>It’s like having your own personal Wikipedia.</strong></p>
-      </li>
-    </ul>  
-  </section>
-	
 
   <section class="wrapper">
     <h2><span>Get in Touch</span></h2>
     <ul class="trinity">
       <li>
         <span class="subtitle">Stay in the loop</span>
-        <a class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
+        <a id="blog-btn" class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
       </li>
       <li>
         <span class="subtitle">Say hello</span>
-        <a class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
       </li>
       <li>
         <span class="subtitle">Serenade us on Twitter</span>
-        <a class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+        <a id="twitter-btn" class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
       </li>
     </ul>
   </section>
 
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+  </script>
 	
 </body>
 </html>

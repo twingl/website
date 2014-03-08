@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Twingl - Gather your thoughts.</title> 
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7002032/717782/css/fonts.css" />
+
+  <link rel="icon" type="image/png" href="../favicon.png" />   
+    
+  <!-- jQuery -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+  <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- Google Analytics --> 
+  <script type="text/javascript">
+  window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;window.analytics.methods.length>i;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+  window.analytics.load("xpi4dw8dr9");
+  window.analytics.page();
+  </script>
+
+  <script type="text/javascript">
+    function getQueryParams(qs) {
+        qs = qs.split("+").join(" ");
+
+        var params = {}, tokens,
+            re = /[?&]?([^=]+)=([^&]*)/g;
+
+        while (tokens = re.exec(qs)) {
+            params[decodeURIComponent(tokens[1])]
+                = decodeURIComponent(tokens[2]);
+        }
+
+        return params;
+    }
+
+    $(document).ready(function() {
+      var email = getQueryParams(document.location.search).email;
+      $('#entry_747532890').val(email);
+    })
+    
+  </script>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="http://twin.gl/">twingl</a>
+    <div class="russell">&nbsp;</div>
+  </header>
+  
+  <section class="hero  wrapper">
+    <h1>You&rsquo;re all signed up!* <br/>Now, may we ask you a question?</h1><!-- Title -->
+    <p class="lead">Thanks so much for your interest! If you have a moment, could you please answer these four quick questions about your workflow? This will help us design something awesome.</p><!-- Lead -->
+    <small class="fine-print">* Do check your email though—you&rsquo;ll need to confirm your subscription.</small>
+
+    <script type="text/javascript" charset="utf-8"> var submitted = false; </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { analytics.track('Completed Survey', {}); window.location.href = '/highfive/'; }"></iframe>
+
+    <form action="https://docs.google.com/forms/d/1L2OIjb0b6H6nTkaFeZztkPtJjhWRngmQn9VgV4RsNdk/formResponse" id="ss-form" method="post" name="ss-form" onsubmit="submitted=true;" target="hidden_iframe">
+      <fieldset>
+        <legend align="center">Just Four Questions</legend>
+        <div>
+          <input type="hidden" name="draftResponse" value="[,,&quot;-3644473337518500318&quot;] ">
+          <input type="hidden" name="pageHistory" value="0">
+          <input type="hidden" name="fromEmail" value="false">
+          <input type="hidden" name="fbzx" value="-3644473337518500318">
+          <input type="hidden" name="entry.747532890" value="" id="entry_747532890">
+
+          
+          <p class="first">
+            <label for="entry_775067916">Where do you blog? <small>(List URLs, if applicable.)</small></label>
+            <textarea type="text" name="entry.775067916" id="entry_775067916"> </textarea>
+          </p>
+          <p>
+            <label for="entry_300777235">What does your toolchain/workflow look like right now? <br><small>On which apps and devices do you like to do your reading, research, and writing?</small></label>
+            <textarea id="entry_300777235" name="entry.300777235"></textarea>
+          </p>
+          <p>
+            <label for="entry_1094042602">What is the biggest sticking point in your workflow right now?<br> <small>What part of getting a blog post out the door just sucks?</small></label>
+            <textarea id="entry_1094042602" name="entry.1094042602"></textarea>
+          </p>
+          <p>
+            <label for="entry_1218850423">If you could wave a magic wand and have a perfect app, what would your dream blogging workflow look like?</label>
+            <textarea id="entry_1218850423" name="entry.1218850423"></textarea>
+          </p>
+        </div>
+        <input type="submit" name="submit" value="Send 'er away!" class="btn btn-cta" />
+      </fieldset>
+    </form>
+
+  </section>
+
+  <section class="wrapper">
+    <h2><span>Get in Touch</span></h2>
+    <ul class="trinity">
+      <li>
+        <span class="subtitle">Stay in the loop</span>
+        <a id="blog-btn" class="btn  btn-secondary  btn-disabled">Blog coming (very) soon</a>
+      </li>
+      <li>
+        <span class="subtitle">Say hello</span>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+      </li>
+      <li>
+        <span class="subtitle">Serenade us on Twitter</span>
+        <a id="twitter-btn" class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+      </li>
+    </ul>
+  </section>
+
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+  </script>
+    
+</body>
+</html>
