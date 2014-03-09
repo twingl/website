@@ -136,7 +136,7 @@ p {
     line-height: 146%;
     color: #575757;
 }
-
+.center {text-align: center;}
 p.lead {
     font-style: italic;
     color: #8D8D8D;
