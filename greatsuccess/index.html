@@ -57,7 +57,7 @@
     <small class="fine-print">* Do check your email though—you&rsquo;ll need to confirm your subscription.</small>
 
     <script type="text/javascript" charset="utf-8"> var submitted = false; </script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { analytics.track('Completed Survey', {}); window.location.href = '/highfive/'; }"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if (submitted) { window.location.href = '/highfive/'; }"></iframe>
 
     <form action="https://docs.google.com/forms/d/1L2OIjb0b6H6nTkaFeZztkPtJjhWRngmQn9VgV4RsNdk/formResponse" id="ss-form" method="post" name="ss-form" onsubmit="submitted=true;" target="hidden_iframe">
       <fieldset>
@@ -87,7 +87,7 @@
             <textarea id="entry_1218850423" name="entry.1218850423"></textarea>
           </p>
         </div>
-        <input type="submit" name="submit" value="Send 'er away!" class="btn btn-cta" />
+        <input type="submit" name="submit" value="Send 'er away!" id="submit-btn" class="btn btn-cta" />
       </fieldset>
     </form>
 
@@ -116,6 +116,9 @@
     var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
     var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
     var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+
+    // Survey Completion Tracking
+    var btn = document.getElementById('submit-btn'); analytics.trackLink(btn, 'Completed Survey', {});
   </script>
     
 </body>
