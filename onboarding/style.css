@@ -1,0 +1,68 @@
+body {
+  background-color: #fafaf9;
+  color: #504A43;
+  font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+  font-size:1.75em;
+}
+
+h1, h2, h3 {
+  font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+  font-weight: 300; 
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+.container {
+  max-width: 33em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.show-on-highlight {
+  visibility: hidden;
+}
+
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.lead {
+  font-style: italic;
+  margin-bottom: 2em;
+}
+
+
+.constrain {
+  max-width: 100%
+}
+
+.logo {
+  display: block;
+  width: 202px;
+  height: 102px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-image: url('img/logo.png');
+  text-indent: -400px;
+}
+
+li {
+  margin-bottom: 1em
+}
+
+p {
+  line-height: 150%
+}
