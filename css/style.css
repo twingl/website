@@ -20,7 +20,7 @@ header {
     background-image: radial-gradient(40% 80%, #9E1452 10%, #4C0921 120%);
 
     /* Layout */
-    min-height: 240px;
+    min-height: 200px;
     position: relative;
 
     border-bottom: 2px solid #000;
@@ -83,7 +83,7 @@ h1 {
 }
 
 .hero h1 {
-    margin-top: 1.25em;
+    /*margin-top: 1.25em;*/
     margin-bottom: 0.75em;
 }
 
@@ -520,4 +520,11 @@ blockquote b {
 }
 blockquote b:before {
     content: "— ";
+}
+
+
+.graph-homepage {
+    max-width: 300px; 
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
