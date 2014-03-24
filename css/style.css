@@ -170,6 +170,7 @@ p.lead {
     font-size: 1.33333em;
     max-width: 26em;
     text-rendering: optimizeLegibility;
+    clear: left;
     /*-webkit-font-smoothing: antialiased;*/
 }
 
