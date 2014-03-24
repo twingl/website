@@ -247,12 +247,6 @@ p.lead {
 
 
 .btn, button {
-    /* Typography */
-    font-family: 'Gotham SSm A', 'Gotham SSm B'; 
-    font-weight: 500; 
-    font-style: normal;
-    letter-spacing: 0.111111111em;
-    text-transform: uppercase;
     text-align: center;
     text-decoration: none;
     line-height: 3em;
@@ -263,6 +257,15 @@ p.lead {
 
 }
     .btn.btn-secondary {
+        /* Typography */
+        font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+        font-weight: 500; 
+        font-style: normal;
+        letter-spacing: 0.111111111em;
+        text-transform: uppercase;
+
+        /*Layout*/
+
         border: 2px solid black;
         border-radius: 4px;
         font-size: 0.5em;
@@ -287,47 +290,67 @@ p.lead {
     } 
 
     .btn.btn-cta {
-        margin-top: 2em;
-
-        letter-spacing: 2px;
-        text-shadow: -1px -1px 0px rgba(0,0,0,0.50);
+        position: relative;
 
         font-size: 1.125em;
         line-height: 3.555555556em;
 
-        text-shadow: -1px -1px 0px rgba(0,0,0,0.50);
-
         -webkit-font-smoothing: antialiased;
         color: #fff;
-        display: inline-block;
+        display: block;
+        float: left;
         padding-left: 5em;
         padding-right: 5em;
-        border-radius: 6px;
         
-        background: #75b33c; /* Old browsers */
-        background: -moz-linear-gradient(-87deg,  #75b33c 0%, #438f28 100%); /* FF3.6+ */
-        background: -webkit-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(-87deg,  #75b33c 0%,#438f28 100%); /* IE10+ */
-        background: linear-gradient(177deg,  #75b33c 0%,#438f28 100%); /* W3C */
 
-        -moz-box-shadow:    0px 2px 0px 0px #000000;
-        -webkit-box-shadow: 0px 2px 0px 0px #000000;
-        box-shadow:         0px 2px 0px 0px #000000;
+        border-radius: 2px;
+     
+ 
+        background: -moz-linear-gradient(-88deg,  #a1db77 0%, #5ebd51 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1db77), color-stop(100%,#5ebd51)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* IE10+ */
+        background: linear-gradient(177deg,  #a1db77 0%,#5ebd51 100%); /* W3C */
+        
+        -moz-box-shadow:    0px 1px 0px 0px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.50);
+        box-shadow:         0px 1px 0px 0px rgba(0,0,0,0.50);
+    
 
     }
 
     .btn.btn-cta:hover {
-        background: #80ce38; /* Old browsers */
-        background: -moz-linear-gradient(45deg,  #80ce38 0%, #49ae24 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#80ce38), color-stop(100%,#49ae24)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* IE10+ */
-        background: linear-gradient(45deg,  #80ce38 0%,#49ae24 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ce38', endColorstr='#49ae24',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+       background: #a1e074; /* Old browsers */
+       background: -moz-linear-gradient(-88deg,  #a1e074 0%, #59c64a 100%); /* FF3.6+ */
+       background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1e074), color-stop(100%,#59c64a)); /* Chrome,Safari4+ */
+       background: -webkit-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Chrome10+,Safari5.1+ */
+       background: -o-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Opera 11.10+ */
+       background: -ms-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* IE10+ */
+       background: linear-gradient(177deg,  #a1e074 0%,#59c64a 100%); /* W3C */
 
+       -moz-box-shadow:    none;
+       -webkit-box-shadow: none;
+       box-shadow:         none;
+
+       top: 1px;
     }
+
+    .btn.btn-cta:hover::before {
+        content:"lol";
+    }
+
+    .btn.btn-cta:active {
+        outline: none;
+       background: #a1e074; /* Old browsers */
+       background: -moz-linear-gradient(-88deg,  #000 0%, #59c64a 100%); /* FF3.6+ */
+       background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1e074), color-stop(100%,#59c64a)); /* Chrome,Safari4+ */
+       background: -webkit-linear-gradient(-88deg,  #000 0%,#59c64a 100%); /* Chrome10+,Safari5.1+ */
+       background: -o-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Opera 11.10+ */
+       background: -ms-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* IE10+ */
+       background: linear-gradient(177deg,  #000 0%,#59c64a 100%); /* W3C */
+    }
+
 
 .trinity {
     list-style: none;
@@ -409,15 +432,19 @@ input[type="email"], input[type="submit"] {
     -webkit-box-sizing: border-box;
 }
 input[type="email"] {
-    border: 2px solid black;
+    
+
+    border: 2px solid #E1DFDB;
     border-radius: 2px;
+    display: block;
+    float: left;
     
     text-align: center;
     font-family: 'Whitney SSm A', 'Whitney SSm B'; 
     font-weight: 300; 
     font-style: normal;
     font-size: 1em;
-    margin-top: 1em;
+    
     height: 64px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -426,7 +453,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-   height: 64px;
+   height: 63px;
    line-height: 64px;
    border:none;
    cursor: pointer;
