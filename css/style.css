@@ -543,6 +543,9 @@ img.awesome {
     border-radius: 50%;
     margin-top: 4em;
     border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .high-five {
@@ -556,6 +559,18 @@ img.awesome {
     }
 
 /* REFACTOR THIS WHEN WE DO OUR BLOG */
+
+#thanks .logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.center .lead {
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+}
 #thanks h3 {
     font-family: 'Mercury SSm A', 'Mercury SSm B';
     font-style: italic;
