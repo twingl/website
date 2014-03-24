@@ -1,3 +1,22 @@
+a.logo { 
+    display: block;
+    width: 139px;
+    height: 82px;
+    background: url(../img/twingl@2x.png) no-repeat;
+    background-size: 139px 82px;
+    overflow: hidden;
+    text-indent: -200%;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
 
 /* TODO: Refactor the heading/body sizes onto a typographic scale. */
 body {
@@ -12,19 +31,33 @@ strong {
     font-weight: 700;
 }
 header {
-    /* Styling */
-    background-image: -o-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
-    background-image: -moz-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
-    background-image: -webkit-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
-    background-image: -ms-radial-gradient(50% 216%, #9E1452 50%, #4C0921 100%);
-    background-image: radial-gradient(40% 80%, #9E1452 10%, #4C0921 120%);
-
+   
     /* Layout */
-    min-height: 200px;
-    position: relative;
+   
+    border-top: 16px solid #940142;
 
-    border-bottom: 2px solid #000;
 }
+
+header nav {
+    margin-top: 60px;
+    padding-bottom: 50px;
+    margin-bottom: 5em;
+    border-bottom: 1px solid #EBE7DF;
+}
+
+header nav ul {
+    float: right;
+    margin-top: 1.6em;
+}
+header nav li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+nav a.logo {
+    float: left;
+}
+
 a {
     color: #9E1452;
     text-decoration: none;
@@ -32,26 +65,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-a.logo { 
-    display: block;
-    width: 159px;
-    height: 85px;
-    margin-left: auto;
-    margin-right: auto;
-    background: url(../img/twingl@2x.png) no-repeat;
-    background-size: 159px 85px;
-    overflow: hidden;
-    text-indent: -200%;
-}
 
-header .logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -80px;
-    margin-top: -43px;
-       
-}
 
 
 section {
@@ -69,17 +83,27 @@ small {
 }
 
 section.hero {
-    text-align: center;
+    /*text-align: center;*/
+}
+
+.graph-homepage {
+    max-width: 300px; 
+    margin-top: 3em;
+    margin-bottom: 2em;
+    float: right;
 }
 
 h1 {
-    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    /*font-family: 'Whitney SSm A', 'Whitney SSm B'; */
     font-weight: 300; 
     font-style: normal;
-    font-size: 3.5em;
-    letter-spacing: -0.03em;
-    line-height: 100%;
+    font-size: 3.8em;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+    max-width: 12em;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #4A4642;
 }
 
 .hero h1 {
@@ -138,10 +162,14 @@ p {
 }
 .center {text-align: center;}
 p.lead {
-    font-style: italic;
-    color: #8D8D8D;
-    font-size: 1.25em;
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    font-weight: 500; 
+    font-style: normal;
+    color: #8C8C8C;
+    font-size: 1.33333em;
+    max-width: 26em;
+    text-rendering: optimizeLegibility;
+    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .subtitle {
@@ -237,8 +265,12 @@ p.lead {
     .btn.btn-secondary {
         border: 2px solid black;
         border-radius: 4px;
-        font-size: 0.6em;
-        line-height: 4em
+        font-size: 0.5em;
+        line-height: 3.5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        font-weight: bold;
+        transition: all 0.08s ease;
     } 
 
     .btn.btn-disabled {
@@ -249,7 +281,9 @@ p.lead {
 
     .btn.btn-secondary:hover {
         background-color: #9E1452;
+        border-color: #9E1452;
         color: #FAF9F7;
+        text-decoration: none;
     } 
 
     .btn.btn-cta {
@@ -520,11 +554,4 @@ blockquote b {
 }
 blockquote b:before {
     content: "— ";
-}
-
-
-.graph-homepage {
-    max-width: 300px; 
-    margin-top: 3em;
-    margin-bottom: 2em;
 }
