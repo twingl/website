@@ -24,7 +24,6 @@ body {
     font-family: 'Mercury SSm A', 'Mercury SSm B';
     font-style: normal;
     line-height: 146%;
-    margin-bottom: 2em
 }
 
 strong { 
@@ -123,6 +122,7 @@ h2, h3, legend {
 
 h2 {
     margin-top: 5.333333333em;
+    margin-bottom: 1.6em;
     position: relative;
 }
 
@@ -131,28 +131,9 @@ h3 {
     color: #888;
 }
 
-h2 span:before, h2 span:after,
-h3 span:before, h3 span:after {
-    border-top: 1px solid black;
-    display: block;
-    height: 1px;
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 36%;
-}
-
-h2 span:before, h2 span:after {
-    width: 40%;
-}
-
 h3 span:before, h3 span:after {
     border-top: 1px solid #88;
     width: 25%;
-}
-h2 span:after, h3 span:after {
-   right: 0;  
-   left: auto; 
 }
 
 p {
@@ -599,4 +580,84 @@ blockquote b {
 }
 blockquote b:before {
     content: "— ";
+}
+
+.page-break {
+  width: 100%;
+  background: #F3F2EF;
+  padding: 0.9em 0;
+  margin: 2.5em auto;
+}
+.page-break p {
+  color: #BCBBBB;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-size: 0.75em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.feature {
+  padding: 3em 0 4em 0;
+  overflow: auto;
+}
+.feature>div { max-width: 960px; margin: 0 auto; }
+.feature.feature-alternate { background: #F3F2EF; }
+
+/* Left, Right alignment declarations */
+.feature .illustration                   { float: left;  margin-right: 2em; }
+.feature.feature-alternate .illustration { float: right; margin-left : 2em; }
+
+.feature .illustration img {}
+.feature .illustration .caption {
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-size: 0.55em;
+  font-weight: 900;
+  color: #B9B9B9;
+  text-align: center;
+}
+
+.feature .text-description {
+  height: 280px;
+}
+.feature .text-description h2 {
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
+  font-size: 1.75em;
+  font-weight: 500;
+  line-height: 1.4em;
+  text-align: left;
+  padding: 1em 0 0 0;
+  margin: 0;
+}
+.feature .text-description p {
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  margin-top: 1em;
+  color: #000;
+}
+
+.sign-up { margin-top: 3em; }
+
+footer.twingl-brain {
+  position: relative;
+  margin-top: 3em;
+  height: 128px;
+  background-image: -webkit-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:    -moz-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:     -ms-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:      -o-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:         radial-gradient(100% 400%, #970144, #2A0613);
+}
+
+footer.twingl-brain:after {
+  content: "";
+  background-image: url(/img/brain-white@2x.png);
+  background-repeat: no-repeat;
+  background-size: 37px 30px;
+  width          : 37px;
+  height         : 30px;
+
+  position: absolute;
+  margin-left: -18px;
+  margin-top : -15px;
+  left: 50%;
+  top : 50%;
 }
