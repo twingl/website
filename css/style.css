@@ -604,8 +604,8 @@ blockquote b:before {
 .feature.feature-alternate { background: #F3F2EF; }
 
 /* Left, Right alignment declarations */
-.feature .illustration                   { float: left;  margin-right: 2em; }
-.feature.feature-alternate .illustration { float: right; margin-left : 2em; }
+.feature .illustration                   { float: left;  margin-right: 2em; visibility: hidden; }
+.feature.feature-alternate .illustration { float: right; margin-left : 2em; visibility: hidden; }
 
 .feature .illustration img {}
 .feature .illustration .caption {
