@@ -655,7 +655,7 @@ blockquote b:before {
 
 footer.twingl-brain {
   position: relative;
-  margin-top: 3em;
+  margin-top: 7em;
   height: 128px;
   background-image: -webkit-radial-gradient(100% 400%, #970144, #2A0613);
   background-image:    -moz-radial-gradient(100% 400%, #970144, #2A0613);
