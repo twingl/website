@@ -132,9 +132,6 @@
 		            this.reset();
 		    	});
 
-          analytics.track('Submitted Email Address for Extension', {
-          });
-
           window.location.href = "/extension/qualifier/?email="+encodeURIComponent(email);
 
 		    } else {
@@ -248,6 +245,9 @@
   </footer>
 
   <script type="text/javascript">
+  	// Track Email Submission
+  	var btn = document.getElementById('mc-embedded-subscribe'); analytics.trackLink(btn, 'Submitted Email Address for Extension', {});
+
     // Footer Link Tracking
     var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
     var link2 = document.getElementById('manifesto-btn'); analytics.trackLink(link2, 'Clicked on the Manifesto Button', {});
