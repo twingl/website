@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upgrade your Google Chrome workflow.</title> 
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7002032/717782/css/fonts.css" />
+
+  <link rel="icon" type="image/png" href="../favicon.png" />   
+
+  <!-- Extension Installation -->
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/holgfndofklbapihjphndnpkaljgahgk">
+    
+  <!-- jQuery -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+  <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- Google Analytics --> 
+  <script type="text/javascript">
+  window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;window.analytics.methods.length>i;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+  window.analytics.load("xpi4dw8dr9");
+  window.analytics.page();
+  </script>
+
+</head>
+
+<body id="thanks">
+  <header>
+    <a class="logo" href="http://twin.gl/">twingl</a>
+  </header>
+
+  <section class="wrapper">
+
+    <div class="center">
+      <button onclick="chrome.webstore.install()" id="install-button" class="btn btn-cta">Install the Twingl Extension</button>
+      <script>
+        if (chrome.app.isInstalled) {
+          document.getElementById('install-button').disabled = 'true';
+          document.getElementById('install-button').value = 'You have already installed the Twingl Extension';
+          document.getElementById('install-button').style.backgroundColor = '#A0A0A0';
+        }
+      </script>
+    </div>
+    
+    <div class="high-five">
+      <h2>How to use the extension</h2>
+      <p>
+        Some interactions with the extension aren't as clear as they will be&mdash;this is beta software after all! 
+      </p>
+      <p>
+        For now we've put together this brief how-to video that explains the main functionality:
+      </p>
+      <br/>
+      <div class="center">
+        <iframe width="420" height="315" src="//www.youtube.com/embed/8SM2CjjTuHE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p>
+        If you come across anything confusing, or have a suggestion or two, we'd love to hear from you. Join the discussion happening in our <a href="https://groups.google.com/forum/#!forum/twingl-beta">Google Group</a> or <a href="mailto:hello@twin.gl?Subject=Twingl Browser Extension enquiry">email us directly</a>.
+      </p>
+    </div>
+
+    <div class="high-five">
+      <h2>Who else do you know with a browser tab problem?</h2>
+      <p>
+        Perhaps you could send out a <a href="https://twitter.com/home?status=Check-out%20@LetsTwingl,%20they're%20building%20a%20workspace%20tool%20for%20Google%20Chrome:%20http://twin.gl/extension">Tweet</a> with our warm regards? Or a post on <a href="https://www.facebook.com/sharer/sharer.php?u=http://twin.gl/extension">Facebook</a>? Either way, our eternal gratitude will follow.
+      </p>
+    </div>
+
+    <div class="center"><a class="awesome" href="http://gim.ie/nSV"><img src="../img/awesome.gif" class="awesome"></a>
+      <h1>You&rsquo;re awesome!</h1><!-- Title -->
+      <p class="lead">Welcome to the bottom of the page.</p>
+    </div>
+
+  </section>
+
+  <section class="wrapper">
+    <h2><span>What now?</span></h2>
+    <ul class="trinity">
+      <li>
+        <span class="subtitle">Stay in the loop</span>
+        <a id="blog-btn" class="btn  btn-secondary" href="http://blog.twin.gl/">Check out our blog</a>
+      </li>
+      <li>
+        <span class="subtitle">Say hello</span>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+      </li>
+      <li>
+        <span class="subtitle">Serenade us on Twitter</span>
+        <a id="twitter-btn" class="btn  btn-secondary" href="https://twitter.com/LetsTwingl">@LetsTwingl</a>
+      </li>
+    </ul>
+  </section>
+
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+
+    // Outbound Link Tracking
+    var link4 = document.getElementById('blog-post-link'); analytics.trackLink(link4, 'Clicked on Blog Post Link', {});
+    var link5 = document.getElementById('styt-link'); analytics.trackLink(link5, 'Clicked on STYT Link', {});
+    var link6 = document.getElementById('bp-link'); analytics.trackLink(link6, 'Clicked on Brain Pickings Link', {});
+    var link7 = document.getElementById('fish-link'); analytics.trackLink(link7, 'Clicked on Fish Link', {});
+    var link8 = document.getElementById('twitter-msg-link'); analytics.trackLink(link8, 'Clicked on Twitter Message Link', {});
+  </script>
+    
+</body>
+</html>
