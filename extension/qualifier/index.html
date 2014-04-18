@@ -51,7 +51,7 @@
     <div class="wrapper  cf">
       <br><br>
       <h1>Before you install the extension, would you mind telling us a bit about yourself?</h1><!-- Title -->
-      <p><small>I don't have the time, <a href="/extension/highfive">take me to straight to the download link</a>.</small></p>
+      <p><small>I don't have the time, <a href="/extension/highfive" id="skip-link">take me to straight to the download link</a>.</small></p>
     </div>
   </header>
 
@@ -91,6 +91,15 @@
     </form>
 
   </section>
+
+
+  <script type="text/javascript">
+    // Skipped Survey Tracking
+    var link1 = document.getElementById('skip-link'); analytics.trackLink(link1, 'Skipped Extension Survey', {});
+
+    // Survey Completion Tracking
+    var btn = document.getElementById('submit-btn'); analytics.trackLink(btn, 'Completed Extension Survey', {});
+  </script>
     
 </body>
 </html>

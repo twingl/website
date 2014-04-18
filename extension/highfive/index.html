@@ -58,14 +58,14 @@
         <iframe width="420" height="315" src="http://www.youtube.com/embed/8SM2CjjTuHE" frameborder="0" allowfullscreen></iframe>
       </div>
       <p>
-        If you come across anything confusing, or have a suggestion or two, we'd love to hear from you. Join the discussion happening in our <a href="https://groups.google.com/forum/#!forum/twingl-beta" target="_blank">Google Group</a> or <a href="mailto:hello@twin.gl?Subject=Twingl Browser Extension enquiry">email us directly</a>.
+        If you come across anything confusing, or have a suggestion or two, we'd love to hear from you. Join the discussion happening in our <a href="https://groups.google.com/forum/#!forum/twingl-beta" target="_blank" id="google-group-link">Google Group</a> or <a href="mailto:hello@twin.gl?Subject=Twingl Browser Extension enquiry" id="email-link">email us directly</a>.
       </p>
     </div>
 
     <div class="high-five">
       <h2>Who else do you know with a browser tab problem?</h2>
       <p>
-        Perhaps you could send out a <a href="https://twitter.com/home?status=Check-out%20@LetsTwingl,%20they're%20building%20a%20workspace%20tool%20for%20Google%20Chrome:%20http://twin.gl/extension" target="_blank">Tweet</a> with our warm regards? Or a post on <a href="https://www.facebook.com/sharer/sharer.php?u=http://twin.gl/extension" target="_blank">Facebook</a>? Either way, our eternal gratitude will follow.
+        Perhaps you could send out a <a href="https://twitter.com/home?status=Check-out%20@LetsTwingl,%20they're%20building%20a%20workspace%20tool%20for%20Google%20Chrome:%20http://twin.gl/extension" target="_blank" id="tweet-link">Tweet</a> with our warm regards? Or a post on <a href="https://www.facebook.com/sharer/sharer.php?u=http://twin.gl/extension" target="_blank" id="fb-link">Facebook</a>? Either way, our eternal gratitude will follow.
       </p>
     </div>
 
@@ -85,7 +85,7 @@
       </li>
       <li>
         <span class="subtitle">Say hello</span>
-        <a id="mail-btn" class="btn  btn-secondary" href="mailto:concierge@twin.gl">concierge@twin.gl</a>
+        <a id="mail-btn" class="btn  btn-secondary" href="mailto:hello@twin.gl">hello@twin.gl</a>
       </li>
       <li>
         <span class="subtitle">Serenade us on Twitter</span>
@@ -95,17 +95,19 @@
   </section>
 
   <script type="text/javascript">
+    // Install Button Tracking
+    var btn = document.getElementById('install-button'); analytics.trackLink(btn, 'Clicked to Install Extension', {});
+
     // Footer Link Tracking
     var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
     var link2 = document.getElementById('mail-btn'); analytics.trackLink(link2, 'Clicked on the Mail Button', {});
     var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
 
     // Outbound Link Tracking
-    var link4 = document.getElementById('blog-post-link'); analytics.trackLink(link4, 'Clicked on Blog Post Link', {});
-    var link5 = document.getElementById('styt-link'); analytics.trackLink(link5, 'Clicked on STYT Link', {});
-    var link6 = document.getElementById('bp-link'); analytics.trackLink(link6, 'Clicked on Brain Pickings Link', {});
-    var link7 = document.getElementById('fish-link'); analytics.trackLink(link7, 'Clicked on Fish Link', {});
-    var link8 = document.getElementById('twitter-msg-link'); analytics.trackLink(link8, 'Clicked on Twitter Message Link', {});
+    var link4 = document.getElementById('google-group-link'); analytics.trackLink(link4, 'Clicked on the Google Group Link', {});
+    var link5 = document.getElementById('email-link'); analytics.trackLink(link5, 'Clicked on the email Link', {});
+    var link6 = document.getElementById('tweet-link'); analytics.trackLink(link6, 'Clicked on the Tweet Link', {});
+    var link7 = document.getElementById('fb-link'); analytics.trackLink(link7, 'Clicked on Facebook Link', {});
   </script>
     
 </body>

@@ -132,7 +132,7 @@
 		            this.reset();
 		    	});
 
-          analytics.track('Submitted Email Address', {
+          analytics.track('Submitted Email Address for Extension', {
           });
 
           window.location.href = "/extension/qualifier/?email="+encodeURIComponent(email);
@@ -203,7 +203,7 @@
       window.analytics.load("xpi4dw8dr9");
       window.analytics.page();
 
-      analytics.track('Vistied Landing Page', {
+      analytics.track('Vistied Extension Landing Page', {
       });
   </script>
 
@@ -214,9 +214,9 @@
     <nav class="wrapper  cf">
         <a class="logo" href="http://twin.gl/">twingl</a>
         <ul>
-            <li><a href="http://blog.twin.gl/" class="btn btn-secondary">Read our Blog</a></li>
-            <li><a href="http://blog.twin.gl/post/79049607696/as-we-may-yet-think" class="btn btn-secondary">Why we're here</a></li>
-            <li><a href="https://twitter.com/LetsTwingl" class="btn btn-secondary">Follow us on Twitter</a></li>
+            <li><a href="http://blog.twin.gl/" id="blog-btn" class="btn btn-secondary">Read our Blog</a></li>
+            <li><a href="http://blog.twin.gl/post/79049607696/as-we-may-yet-think" id="manifesto-btn" class="btn btn-secondary">Why we're here</a></li>
+            <li><a href="https://twitter.com/LetsTwingl" id="twitter-btn" class="btn btn-secondary">Follow us on Twitter</a></li>
         </ul>
     </nav>
   </header>
@@ -246,6 +246,13 @@
 
   <footer class="twingl-brain">
   </footer>
-	
+
+  <script type="text/javascript">
+    // Footer Link Tracking
+    var link1 = document.getElementById('blog-btn'); analytics.trackLink(link1, 'Clicked on the Blog Button', {});
+    var link2 = document.getElementById('manifesto-btn'); analytics.trackLink(link2, 'Clicked on the Manifesto Button', {});
+    var link3 = document.getElementById('twitter-btn'); analytics.trackLink(link3, 'Clicked on the Twitter Button', {});
+  </script>
+
 </body>
 </html>
