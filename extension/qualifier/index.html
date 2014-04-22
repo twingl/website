@@ -39,6 +39,7 @@
 
     $(document).ready(function() {
       var email = getQueryParams(document.location.search).email;
+      if (!email || email.length <= 0) email = getQueryParams(document.location.search).tw_screen_name;
       $('#entry_742315114').val(email);
     })
     
