@@ -1,9 +1,9 @@
 a.logo { 
     display: block;
-    width: 139px;
-    height: 82px;
-    background: url(../img/twingl@2x.png) no-repeat;
-    background-size: 139px 82px;
+    width: 104px;
+    height: 100px;
+    background: url(../img/trailblazer-logo.png) no-repeat;
+    background-size: 104px 100px;
     overflow: hidden;
     text-indent: -200%;
 }
@@ -33,7 +33,7 @@ header {
    
     /* Layout */
    
-    border-top: 16px solid #940142;
+    border-top: 16px solid #FF917B;
 
 }
 
@@ -266,8 +266,8 @@ p.lead {
     }
 
     .btn.btn-secondary:hover {
-        background-color: #9E1452;
-        border-color: #9E1452;
+        background-color: #FF917B;
+        border-color: #FF917B;
         color: #FAF9F7;
         text-decoration: none;
     } 
@@ -640,11 +640,11 @@ footer.twingl-brain {
   position: relative;
   margin-top: 3em;
   height: 128px;
-  background-image: -webkit-radial-gradient(100% 400%, #970144, #2A0613);
-  background-image:    -moz-radial-gradient(100% 400%, #970144, #2A0613);
-  background-image:     -ms-radial-gradient(100% 400%, #970144, #2A0613);
-  background-image:      -o-radial-gradient(100% 400%, #970144, #2A0613);
-  background-image:         radial-gradient(100% 400%, #970144, #2A0613);
+  background-image: -webkit-radial-gradient(100% 400%, #FF917B, #742C04);
+  background-image:    -moz-radial-gradient(100% 400%, #FF917B, #742C04);
+  background-image:     -ms-radial-gradient(100% 400%, #FF917B, #742C04);
+  background-image:      -o-radial-gradient(100% 400%, #FF917B, #742C04);
+  background-image:         radial-gradient(100% 400%, #FF917B, #742C04);
 }
 
 footer.twingl-brain:after {
