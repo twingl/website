@@ -1,0 +1,663 @@
+a.logo { 
+    display: block;
+    width: 139px;
+    height: 82px;
+    background: url(../img/twingl@2x.png) no-repeat;
+    background-size: 139px 82px;
+    overflow: hidden;
+    text-indent: -200%;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* TODO: Refactor the heading/body sizes onto a typographic scale. */
+body {
+    background-color: #FAF9F7;
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: normal;
+    line-height: 146%;
+}
+
+strong { 
+    font-weight: 700;
+}
+header {
+   
+    /* Layout */
+   
+    border-top: 16px solid #940142;
+
+}
+
+header nav {
+    margin-top: 60px;
+    padding-bottom: 50px;
+    margin-bottom: 5em;
+    border-bottom: 1px solid #EBE7DF;
+}
+
+header nav ul {
+    float: right;
+    margin-top: 1.6em;
+}
+header nav li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+nav a.logo {
+    float: left;
+}
+
+a {
+    color: #9E1452;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+section {
+    clear: both;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+small {
+    font-size: 0.66666667em;
+}
+
+.graph-homepage {
+    max-width: 300px; 
+    margin-top: 3em;
+    margin-bottom: 2em;
+    float: right;
+}
+
+h1 {
+    /*font-family: 'Whitney SSm A', 'Whitney SSm B'; */
+    font-weight: 300; 
+    font-style: normal;
+    font-size: 3.6em;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #4A4642;
+}
+
+.hero {
+    margin-bottom: 4em;
+}
+
+.hero h1 {
+    /*margin-top: 1.25em;*/
+    margin-bottom: 0.75em;
+    max-width: 620px;
+    float: left;
+}
+
+h2, h3, legend {
+    font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+    font-weight: 700; 
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+h2 {
+    margin-top: 5.333333333em;
+    margin-bottom: 1.6em;
+    position: relative;
+}
+
+h3 {
+    position: relative;
+    color: #888;
+}
+
+h3 span:before, h3 span:after {
+    border-top: 1px solid #88;
+    width: 25%;
+}
+
+p {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: normal;
+    line-height: 146%;
+    color: #575757;
+}
+.center {text-align: center;}
+p.lead {
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    font-weight: 500; 
+    font-style: normal;
+    color: #8C8C8C;
+    font-size: 1.33333em;
+    max-width: 26em;
+    text-rendering: optimizeLegibility;
+    clear: left;
+    /*-webkit-font-smoothing: antialiased;*/
+}
+
+.subtitle {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.875em;
+    margin-top: 0.1em;
+    margin-bottom: 1em;
+    color: #999;
+    display: block;
+    max-width: 50em;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.saas-module {
+    padding-top: 12em;
+    display: block;
+
+}
+.saas-module.collect {
+    background: url(../img/icon-collect.png) 50% 3em no-repeat;
+}
+    .saas-module.collect:hover {
+        background: url(../img/collect-hover.png) 50% 3em no-repeat;   
+    }
+.saas-module.connect {
+    background: url(../img/icon-connect.png) 50% 3em no-repeat;
+}
+    .saas-module.connect:hover {
+        background: url(../img/connect-hover.png) 50% 3em no-repeat;   
+    }
+
+.saas-module.consult {
+    background: url(../img/icon-consult.png) 50% 3em no-repeat;
+}
+
+    .saas-module.consult:hover {
+        background: url(../img/consult-hover.png) 50% 3em no-repeat;   
+    }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .saas-module.connect {
+        background: url(../img/icon-connect@2x.png) 50% 3em no-repeat;
+        background-size: 85px 97px;
+    }
+        .saas-module.connect:hover {
+            background: url(../img/connect-hover@2x.png) 50% 3em no-repeat;
+            background-size: 85px 97px;
+        }
+
+    .saas-module.connect {
+        background: url(../img/icon-connect@2x.png) 50% 3em no-repeat;
+        background-size: 85px 97px;
+    }
+        .saas-module.connect:hover {
+            background: url(../img/connect-hover@2x.png) 50% 3em no-repeat;
+            background-size: 85px 97px;
+        }
+
+    .saas-module.consult {
+        background: url(../img/icon-consult@2x.png) 50% 3em no-repeat;
+        background-size: 81px 100px;
+    }
+        .saas-module.consult:hover {
+            background: url(../img/consult-hover@2x.png) 50% 3em no-repeat;
+            background-size: 81px 100px;
+        }
+}
+
+.saas-module p {
+    font-size: 0.875em;
+}
+
+
+.btn, button {
+    text-align: center;
+    text-decoration: none;
+    line-height: 3em;
+    color: #000;
+
+    /* Layout */
+    display: block;
+
+}
+    .btn.btn-secondary {
+        /* Typography */
+        font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+        font-weight: 500; 
+        font-style: normal;
+        letter-spacing: 0.111111111em;
+        text-transform: uppercase;
+
+        /*Layout*/
+
+        border: 2px solid black;
+        border-radius: 4px;
+        font-size: 0.55em;
+        line-height: 3.5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        font-weight: bold;
+        transition: all 0.08s ease;
+    } 
+
+    .btn.btn-disabled {
+        border-color: #ccc!important;
+        color: #ccc!important;
+        background-color: transparent!important;
+    }
+
+    .btn.btn-secondary:hover {
+        background-color: #9E1452;
+        border-color: #9E1452;
+        color: #FAF9F7;
+        text-decoration: none;
+    } 
+
+    .btn.btn-cta {
+        position: relative;
+
+        font-size: 18px;
+        line-height: 3.555555556em;
+
+        -webkit-font-smoothing: antialiased;
+        color: #fff;
+        display: block;
+        float: left;
+        /*padding-left: 5em;
+        padding-right: 5em;*/
+        width: 380px;
+        margin-left: 20px;
+
+        border-radius: 2px;
+     
+ 
+        background: -moz-linear-gradient(-88deg,  #a1db77 0%, #5ebd51 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1db77), color-stop(100%,#5ebd51)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-88deg,  #a1db77 0%,#5ebd51 100%); /* IE10+ */
+        background: linear-gradient(177deg,  #a1db77 0%,#5ebd51 100%); /* W3C */
+        
+        -moz-box-shadow:    0px 1px 0px 0px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.50);
+        box-shadow:         0px 1px 0px 0px rgba(0,0,0,0.50);
+    
+
+    }
+
+    .btn.btn-cta:hover {
+       background: #a1e074; /* Old browsers */
+       background: -moz-linear-gradient(-88deg,  #a1e074 0%, #59c64a 100%); /* FF3.6+ */
+       background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1e074), color-stop(100%,#59c64a)); /* Chrome,Safari4+ */
+       background: -webkit-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Chrome10+,Safari5.1+ */
+       background: -o-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Opera 11.10+ */
+       background: -ms-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* IE10+ */
+       background: linear-gradient(177deg,  #a1e074 0%,#59c64a 100%); /* W3C */
+
+       -moz-box-shadow:    none;
+       -webkit-box-shadow: none;
+       box-shadow:         none;
+
+       top: 1px;
+    }
+
+    .btn.btn-cta:hover::before {
+        content:"lol";
+    }
+
+    .btn.btn-cta:active {
+        outline: none;
+       background: #a1e074; /* Old browsers */
+       background: -moz-linear-gradient(-88deg,  #000 0%, #59c64a 100%); /* FF3.6+ */
+       background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a1e074), color-stop(100%,#59c64a)); /* Chrome,Safari4+ */
+       background: -webkit-linear-gradient(-88deg,  #000 0%,#59c64a 100%); /* Chrome10+,Safari5.1+ */
+       background: -o-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* Opera 11.10+ */
+       background: -ms-linear-gradient(-88deg,  #a1e074 0%,#59c64a 100%); /* IE10+ */
+       background: linear-gradient(177deg,  #000 0%,#59c64a 100%); /* W3C */
+    }
+
+
+.trinity {
+    list-style: none;
+    display: block;
+}
+
+.trinity li {
+    width: 33.333333333333333333333%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.trinity:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.russell {
+     height:32px;
+     width:64px;
+     border-radius: 64px 64px 0 0;
+     -moz-border-radius: 64px 64px 0 0;
+     -webkit-border-radius: 64px 64px 0 0;
+     background-color: #FAF9F7;
+     position: absolute;
+     bottom: -2px;
+     left: 50%;
+     margin-left: -32px;
+     border: 2px solid black;
+
+}
+
+/* Awful 4:30am code begins here */
+
+.russell:before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 33px;
+    background-image: url(../img/icon-brain@2x.png);
+    background-size: 38px 33px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 4;
+    margin-left: -19px;
+}
+.russell:after {
+    width:64px;
+    display: block;
+    content: "";
+    border-bottom: 2px solid #FAF9F7;
+    position: absolute;
+    bottom: -2px;
+}
+
+
+.chrome {
+    display: none;
+}
+
+.isChrome .chrome {
+    display: block;
+}
+
+.isChrome .notChrome {
+    display: none;
+}
+
+input[type="email"], input[type="submit"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+input[type="email"] {
+    
+
+    border: 2px solid #E1DFDB;
+    border-radius: 2px;
+    display: block;
+    float: left;
+    
+    text-align: center;
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+    font-weight: 300; 
+    font-style: normal;
+    font-size: 18px;
+    
+    height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    width: 540px;
+}
+
+input[type="submit"] {
+   height: 63px;
+   line-height: 64px;
+   border:none;
+   cursor: pointer;
+}
+
+#mc_embed_signup {
+    position: relative;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin: 0;
+    
+    background-color: #6B0505;
+    font-weight: bold;
+    z-index: 1;
+    color: #FFF;
+    position: absolute;
+    width: 420px;
+    text-align: center;
+    bottom: -72px;
+    height: 48px;
+    font-size: 80%;
+    left: 27%;
+    margin-left: -210px;
+    border-radius: 8px;
+    line-height: 48px;
+
+}
+
+fieldset {
+    border: 1px solid #000;
+    padding-bottom: 2em;
+    margin-top: 4em;
+}
+
+/*you're a bloody */ legend /*mate*/ {
+    padding: 0 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+label {
+    font-size: 1em;
+    max-width: 40em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+    line-height: 150%;
+}
+
+
+textarea {
+    width: 35em;
+    height: 8em;
+    padding: 1em;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+form p {
+    margin-top: 4.5em;
+    margin-bottom: 2em;
+    font-style: italic;
+}
+
+fieldset p:last-child {
+    margin-bottom: 0;
+}
+
+fieldset p.first {
+    margin-top: 1.75em;
+}
+
+.fine-print {
+    color: #aaa;
+    margin-top: 1em;
+    display: block;
+}
+
+img.awesome {
+    border-radius: 50%;
+    margin-top: 4em;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.high-five {
+    text-align: left;
+    max-width: 600px;
+    margin: 0px auto 30px auto;
+}
+
+    .high-five a {
+        
+    }
+
+/* REFACTOR THIS WHEN WE DO OUR BLOG */
+
+#thanks .logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.center .lead {
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+}
+#thanks h3 {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-style: italic;
+    letter-spacing: auto;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+blockquote p {
+    font-style: italic;
+    quotes: '“' '”'
+}
+
+blockquote p:before {
+    content: open-quote;
+}
+blockquote p:after {
+    content: close-quote;
+}
+blockquote b {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+blockquote b:before {
+    content: "— ";
+}
+
+.page-break {
+  width: 100%;
+  background: #F3F2EF;
+  padding: 0.9em 0;
+  margin: 2.5em auto;
+}
+.page-break p {
+  color: #BCBBBB;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-size: 0.75em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.feature {
+  padding: 3em 0 4em 0;
+  overflow: auto;
+}
+.feature>div { max-width: 960px; margin: 0 auto; }
+.feature.feature-alternate { background: #F3F2EF; }
+
+/* Left, Right alignment declarations */
+.feature .illustration                   { float: left;  margin-right: 2em; visibility: hidden; }
+.feature.feature-alternate .illustration { float: right; margin-left : 2em; visibility: hidden; }
+
+.feature .illustration img {}
+.feature .illustration .caption {
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-size: 0.55em;
+  font-weight: 900;
+  color: #B9B9B9;
+  text-align: center;
+}
+
+.feature .text-description {
+  height: 280px;
+}
+.feature .text-description h2 {
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
+  font-size: 1.75em;
+  font-weight: 500;
+  line-height: 1.4em;
+  text-align: left;
+  padding: 1em 0 0 0;
+  margin: 0;
+}
+.feature .text-description p {
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  margin-top: 1em;
+  color: #000;
+}
+
+.sign-up { margin-top: 3em; }
+
+footer.twingl-brain {
+  position: relative;
+  margin-top: 3em;
+  height: 128px;
+  background-image: -webkit-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:    -moz-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:     -ms-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:      -o-radial-gradient(100% 400%, #970144, #2A0613);
+  background-image:         radial-gradient(100% 400%, #970144, #2A0613);
+}
+
+footer.twingl-brain:after {
+  content: "";
+  background-image: url(/img/brain-white@2x.png);
+  background-repeat: no-repeat;
+  background-size: 37px 30px;
+  width          : 37px;
+  height         : 30px;
+
+  position: absolute;
+  margin-left: -18px;
+  margin-top : -15px;
+  left: 50%;
+  top : 50%;
+}
