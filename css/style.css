@@ -85,7 +85,8 @@ small {
     max-width: 300px; 
     margin-top: 3em;
     margin-bottom: 2em;
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -107,8 +108,8 @@ h1 {
 .hero h1 {
     /*margin-top: 1.25em;*/
     margin-bottom: 0.75em;
-    max-width: 620px;
-    float: left;
+    
+    text-align: center;
 }
 
 h2, h3, legend {
@@ -152,6 +153,9 @@ p.lead {
     max-width: 26em;
     text-rendering: optimizeLegibility;
     clear: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     /*-webkit-font-smoothing: antialiased;*/
 }
 
@@ -320,9 +324,7 @@ p.lead {
        top: 1px;
     }
 
-    .btn.btn-cta:hover::before {
-        content:"lol";
-    }
+    
 
     .btn.btn-cta:active {
         outline: none;
@@ -660,4 +662,40 @@ footer.twingl-brain:after {
   margin-top : -15px;
   left: 50%;
   top : 50%;
+}
+
+
+.unity {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 50%;
+    float: left;   
+    padding: 20px;
+}
+
+.btn-cta {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: bold;
+}
+.btn-cta:hover {
+    text-decoration: none;
+}
+
+.unity .btn-cta {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.hero .lead {
+    margin-bottom: 1em;
+}
+
+.hero .btn.btn-secondary {
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
