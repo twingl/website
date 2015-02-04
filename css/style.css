@@ -51,15 +51,48 @@ header nav ul {
 header nav li {
     display: inline-block;
     margin-left: 1em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-nav a.logo {
-    float: left;
+@media (min-width: 768px) {
+    nav a.logo {
+        float: left;
+    }    
 }
 
+@media (max-width: 767px) {
+    nav a.logo {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    header nav ul {
+        float:none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }  
+
+    header nav li {
+        margin-left: 0
+    }
+
+    .hero h1 {
+        font-size: 2.4em;
+    }
+
+    .hero p.lead {
+        font-size: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media
 a {
     color: #9E1452;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
@@ -262,7 +295,11 @@ p.lead {
         font-weight: bold;
         transition: all 0.08s ease;
     } 
-
+    .btn.btn-secondary.btn-not-secondary {
+        background-color: #F6643F;
+        border-color: #F6643F;
+        color: #fff;
+    }
     .btn.btn-disabled {
         border-color: #ccc!important;
         color: #ccc!important;
@@ -669,11 +706,19 @@ footer.twingl-brain:after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    width: 50%;
-    float: left;   
+    width: 100%;
+    /*float: left;   */
     padding: 20px;
+    text-align: center;
 }
-
+.unity img {
+    margin-bottom: 1em;
+}
+.unity p {
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+}
 .btn-cta {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: bold;
@@ -689,7 +734,7 @@ footer.twingl-brain:after {
 }
 
 .hero .lead {
-    margin-bottom: 1em;
+    margin-bottom: 4em;
 }
 
 .hero .btn.btn-secondary {
